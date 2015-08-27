@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="@+id/Preferences" android:icon="@drawable/preferences"
+		android:title="@string/preferences"></item>
+	<item android:id="@+id/Choose_Algorithm" android:icon="@drawable/algorithm"
+		android:title="@string/choose_algorithm"></item>
+	<item android:id="@+id/Exit_App" android:icon="@drawable/shut_down"
+		android:title="@string/shut_down"></item>
+</menu>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen android:key="pref_screen_key"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<PreferenceCategory android:key="building_key"
+		android:title="@string/building_settings">
+
+		<Preference android:key="image_custom" android:title="@string/building_title"
+			android:summary="@string/building_summary" android:dialogTitle="Select Building" />
+
+	</PreferenceCategory>
+
+	<PreferenceCategory android:title="@string/radiomap_file_settings">
+
+		<PreferenceScreen android:title="@string/radiomap_download_title"
+			android:summary="@string/radiomap_download_summary" xmlns:android="http://schemas.android.com/apk/res/android">
+
+			<PreferenceCategory android:title="@string/download_connection_title">
+
+				<EditTextPreference android:title="@string/serverIP_title"
+					android:key="serverIP" android:summary="@string/serverIP_summary"
+					android:maxLength="15"></EditTextPreference>
+
+				<EditTextPreference android:title="@string/serverPORT_title"
+					android:key="serverPORT" android:summary="@string/serverPORT_summary"
+					android:inputType="number" android:maxLength="5"></EditTextPreference>
+
+			</PreferenceCategory>
+
+
+			<PreferenceCategory android:title="@string/downloading_file_title">
+
+				<Preference android:key="folder_browser" android:title="@string/folder_browser_title"
+					android:summary="@string/folder_browser_summary" />
+
+				<EditTextPreference android:title="@string/filename_title"
+					android:key="radiomap_file_download" android:summary="@string/filename_summary"
+					android:defaultValue="radiomap_indoor"></EditTextPreference>
+
+			</PreferenceCategory>
+
+		</PreferenceScreen>
+
+		<Preference android:key="radiomap_file" android:title="@string/radiomap_file_title"
+			android:summary="@string/radiomap_file_summary" />
+
+	</PreferenceCategory>
+
+	<PreferenceCategory android:title="Mode">
+		<CheckBoxPreference android:title="Online/Offline Mode"
+			android:defaultValue="false" android:key="modeIn" android:summaryOff="Online Mode"
+			android:summaryOn="Offline Mode" />
+
+
+		<Preference android:key="test_data_file" android:title="@string/test_data_file_title"
+			android:summary="@string/test_data_file_summary" android:dependency="modeIn" />
+	</PreferenceCategory>
+
+
+</PreferenceScreen>

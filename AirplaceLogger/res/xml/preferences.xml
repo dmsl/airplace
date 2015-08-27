@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen android:key="pref_screen_key" xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<PreferenceCategory android:key="building_key" android:title="@string/building_title">
+
+		<Preference android:key="image_custom" android:title="Floor Plan"
+			android:summary="@string/building_summary" android:dialogTitle="Select Building" />
+
+	</PreferenceCategory>
+
+	<PreferenceCategory android:title="@string/sampling_title">
+
+		<ListPreference android:title="@string/samples_title"
+			android:summary="@string/samples_summary" android:key="samples_num"
+			android:defaultValue="5" android:entries="@array/samplesArray"
+			android:entryValues="@array/samplesValues" />
+
+
+		<ListPreference android:title="@string/samples_interval_title"
+			android:summary="@string/samples_interval_summary" android:key="samples_interval"
+			android:defaultValue="1000" android:entries="@array/intervalArray"
+			android:entryValues="@array/intervalValues" />
+
+	</PreferenceCategory>
+
+	<PreferenceCategory android:title="@string/storing_title">
+
+		<Preference android:key="folder_browser" android:title="@string/folder_browser_title"
+			android:summary="@string/folder_browser_summary" />
+
+		<EditTextPreference android:title="@string/filename_title"
+			android:key="filename_log" android:summary="@string/filename_summary"
+			android:defaultValue="rss-log"></EditTextPreference>
+
+		<CheckBoxPreference android:title="Write Mode"
+			android:defaultValue="false" android:key="write_mode"
+			android:summaryOff="Append mode" android:summaryOn="Overwrite mode" />
+
+	</PreferenceCategory>
+
+	<PreferenceCategory android:title="@string/uploading_title">
+
+		<EditTextPreference android:title="@string/server_IP_title"
+			android:key="serverIP" android:summary="@string/server_IP_summary"
+			android:maxLength="15"></EditTextPreference>
+		<EditTextPreference android:title="@string/server_PORT_title"
+			android:key="serverPORT" android:summary="@string/server_PORT_summary"
+			android:inputType="number" android:maxLength="5"></EditTextPreference>
+		<Preference android:key="upload_file" android:title="@string/upload_file_title"
+			android:summary="@string/upload_file_summary" />
+	</PreferenceCategory>
+
+
+</PreferenceScreen>

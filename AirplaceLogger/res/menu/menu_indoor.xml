@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="@+id/Start_Scan" android:icon="@drawable/start_scan"
+		android:title="@string/start_scan"></item>
+	<item android:id="@+id/Stop_Scan" android:icon="@drawable/stop_scan"
+		android:title="@string/stop_scan"></item>
+	<item android:id="@+id/Preferences" android:icon="@drawable/preferences"
+		android:title="@string/Preferences"></item>
+	<item android:id="@+id/Exit_App" android:icon="@drawable/shut_down"
+		android:title="@string/shut_down"></item>
+</menu>

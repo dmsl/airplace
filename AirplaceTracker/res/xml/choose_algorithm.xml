@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<PreferenceCategory android:title="Algorithms">
+
+		<ListPreference android:title="@string/algorithms_title"
+			android:summary="@string/algorithms_summary" android:key="Algorithms"
+			android:defaultValue="1" android:entries="@array/AlgorithmsArray"
+			android:entryValues="@array/AlgorithmsValues" />
+
+	</PreferenceCategory>
+	
+
+	<PreferenceCategory android:title="Algorithms Short Description">
+
+		<Preference android:title="Short Description"
+			android:summary="Choose an algorithm to learn about it" android:key="Short_Desc" />
+
+	</PreferenceCategory>
+
+</PreferenceScreen>
+

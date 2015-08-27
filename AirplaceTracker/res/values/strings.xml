@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Airplace Tracker</string>
+
+	<string name="preferences">Preferences</string>
+	<string name="choose_algorithm">Algorithms</string>
+	<string name="shut_down">Close Application</string>
+
+
+	<string name="building_settings">Building Settings</string>
+	<string name="building_title">Floor Plan</string>
+	<string name="building_summary">The floor plan image of building</string>
+
+	<string name="radiomap_file_settings">Radiomap Settings</string>
+	<string name="radiomap_download_title">RadioMap Download Settings</string>
+	<string name="radiomap_download_summary">Configure parameters to download radio map</string>
+	<string name="radiomap_file_title">Radiomap File</string>
+	<string name="radiomap_file_summary">The radiomap that is currently used to estimate
+		position</string>
+
+	<string name="test_data_file_title">Test Data File</string>
+	<string name="test_data_file_summary">The data file to use for offline mode statistics</string>
+
+	<string name="download_connection_title">Connection Settings</string>
+	<string name="serverIP_title">Server Address</string>
+	<string name="serverIP_summary">The IP address of the server</string>
+	<string name="serverPORT_title">Port number</string>
+	<string name="serverPORT_summary">The non-IANA reserved port</string>
+
+	<string name="downloading_file_title">Downloading Settings</string>
+	<string name="folder_browser_title">Radio Map Folder</string>
+	<string name="folder_browser_summary">The folder to store radio map file after
+		downloading</string>
+	<string name="filename_title">Radio Map Filename</string>
+	<string name="filename_summary">The filename of radio map file</string>
+
+	<string name="parentDir">..</string>
+	<string name="homeDir">.</string>
+	<string name="rootDir">/</string>
+
+	<string name="algorithms_title">Positioning Algorithms</string>
+	<string name="algorithms_summary">Choose one of the following algorithms to estimate
+		your position</string>
+
+	<string-array name="AlgorithmsArray">
+		<item>K Nearest Neighbor (KNN) Algorithm</item>
+		<item>Weighted K Nearest Neighbor (WKNN) Algorithm</item>
+		<item>Probabilistic Maximum A Posteriori (MAP) Algorithm</item>
+		<item>Probabilistic Minimum Mean Square Error (MMSE) Algorithm</item>
+	</string-array>
+
+	<string-array name="AlgorithmsValues">
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+	</string-array>
+
+</resources>

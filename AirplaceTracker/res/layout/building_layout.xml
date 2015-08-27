@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_height="wrap_content"
+	android:layout_width="fill_parent">
+
+	<RelativeLayout android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:gravity="top">
+
+		<TextView android:id="@+id/title" android:layout_width="wrap_content"
+			android:layout_alignParentLeft="true" android:textColor="#000000"
+			android:layout_height="wrap_content" android:background="@drawable/title_back" />
+
+		<TextView android:text="" android:layout_height="wrap_content"
+			android:background="#FF0000" android:textColor="#000000" android:id="@+id/LatTitle"
+			android:layout_width="wrap_content" android:layout_marginTop="4dip"
+			android:layout_marginLeft="10dip" android:layout_toRightOf="@+id/title"
+			android:layout_alignTop="@+id/title" android:gravity="center"></TextView>
+
+		<TextView android:text="" android:layout_height="wrap_content"
+			android:background="#FF0000" android:textColor="#000000" android:id="@+id/LonTitle"
+			android:layout_below="@+id/LatTitle" android:layout_alignLeft="@+id/LatTitle"
+			android:layout_alignRight="@+id/LatTitle" android:layout_width="wrap_content"
+			android:gravity="center"></TextView>
+
+		<TextView android:id="@+id/latitude" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:background="#FFFFFF"
+			android:textColor="#000000" android:layout_toRightOf="@+id/LatTitle"
+			android:layout_alignTop="@+id/LatTitle" android:layout_alignBottom="@+id/LatTitle"
+			android:numeric="decimal" android:maxLength="10"></TextView>
+
+		<TextView android:id="@+id/longitude" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:background="#FFFFFF"
+			android:textColor="#000000" android:layout_below="@+id/latitude"
+			android:layout_alignLeft="@+id/latitude" android:numeric="decimal"
+			android:maxLength="10"></TextView>
+
+		<TextView android:id="@+id/scanResults" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_alignParentRight="true"
+			android:layout_alignTop="@+id/latitude" />
+
+	</RelativeLayout>
+
+	<RelativeLayout android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:gravity="top"
+		android:paddingTop="10dip">
+
+
+		<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+			<cy.com.zoom.ImageZoomView
+				xmlns:android="http://schemas.android.com/apk/res/android"
+				android:id="@+id/zoomview" android:layout_width="fill_parent"
+				android:layout_height="fill_parent" />
+
+		</RelativeLayout>
+		
+		<Button android:id="@+id/pos_error" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_centerVertical="true"
+			android:layout_alignParentRight="true" android:background="@drawable/pos_err_button" />
+
+		<Button android:text="Download\nRadioMap" android:id="@+id/downloadRadioMap"
+			android:layout_alignParentBottom="true"
+			android:layout_alignParentLeft="true" android:layout_height="wrap_content"
+			android:layout_width="wrap_content"></Button>
+
+		<Button android:text="Find Me" android:id="@+id/find_me"
+			android:layout_alignParentBottom="true" android:layout_alignTop="@+id/downloadRadioMap"
+			android:layout_alignBottom="@+id/downloadRadioMap"
+			android:layout_alignParentRight="true" android:layout_height="wrap_content"
+			android:layout_width="wrap_content"></Button>
+
+		<ToggleButton android:id="@+id/trackme"
+			android:layout_alignTop="@+id/find_me" android:layout_alignBottom="@+id/find_me"
+			android:layout_alignParentBottom="true" android:layout_toRightOf="@+id/downloadRadioMap"
+			android:layout_toLeftOf="@+id/find_me" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:textOn="Track Me On"
+			android:textOff="Track Me Off" />
+
+	</RelativeLayout>
+
+</LinearLayout>
+	

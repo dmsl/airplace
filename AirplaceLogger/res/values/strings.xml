@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Airplace Logger</string>
+	<string name="prefs_name">Airplace Logger Preferences</string>
+	<string name="app_choose_folder">Choose folder</string>
+
+	<string name="chooseSample_prompt">Choose Number of Samples</string>
+	<string name="start_scan">Start Scan</string>
+	<string name="stop_scan">Stop Scan</string>
+	<string name="Preferences">Preferences</string>
+	<string name="clear">Clear Screen</string>
+	<string name="shut_down">Close Application</string>
+
+	<string name="building_title">Building Settings</string>
+	<string name="building_summary">The floor plan image of building</string>
+
+	<string name="sampling_title">Sampling Settings</string>
+	<string name="samples_title">Samples Number</string>
+	<string name="samples_summary">The number of samples to record</string>
+	<string name="samples_interval_title">Samples Interval</string>
+	<string name="samples_interval_summary">Time between two consecutive samplings</string>
+
+	<string name="storing_title">Storing Settings</string>
+	<string name="folder_browser_title">Folder</string>
+	<string name="folder_browser_summary">The folder to store RSS log files</string>
+	<string name="filename_title">Filename</string>
+	<string name="filename_summary">The file contains RSS log records</string>
+
+	<string name="uploading_title">Uploading Settings</string>
+	<string name="server_IP_title">Server Address</string>
+	<string name="server_IP_summary">The server\'s IP address</string>
+	<string name="server_PORT_title">Port number</string>
+	<string name="server_PORT_summary">The server\'s port</string>
+	<string name="upload_file_title">File</string>
+	<string name="upload_file_summary">The file to upload</string>
+
+
+	<string name="parentDir">..</string>
+	<string name="homeDir">.</string>
+	<string name="rootDir">/</string>
+
+	<string-array name="samplesArray">
+		<item>5 samples</item>
+		<item>10 samples</item>
+		<item>15 samples</item>
+		<item>20 samples</item>
+		<item>25 samples</item>
+		<item>30 samples</item>
+	</string-array>
+
+	<string-array name="samplesValues">
+		<item>5</item>
+		<item>10</item>
+		<item>15</item>
+		<item>20</item>
+		<item>25</item>
+		<item>30</item>
+	</string-array>
+
+	<string-array name="intervalArray">
+		<item>0.5 sec</item>
+		<item>1 sec</item>
+		<item>2 sec</item>
+	</string-array>
+
+	<string-array name="intervalValues">
+		<item>500</item>
+		<item>1000</item>
+		<item>2000</item>
+	</string-array>
+
+</resources>
