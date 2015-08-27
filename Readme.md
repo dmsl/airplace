@@ -137,3 +137,18 @@ Test data may serve two purposes:
 6.	You may switch back to real-time positioning by using the ‘Online/Offline Mode’ checkbox in the Airplace Tracker preferences
 
 
+
+## Known Issues
+
+When creating the Parameters file, the JAR would read the "indoor-radiomap-mean.txt" file, but the JAR file would not consider regional settings. So, if your decimal character is a comma, and not a period, then the Server is complaining about reading for example a "98,1" value because it is expecting "98.1" instead.
+
+The only solution we have for now is to replace the wrong commas (not all of them, though) with periods. For example,
+
+With Notepad++, a RegEx like this
+Search: ([0-9]+)[,]([0-9])+
+Replace with: \1\.\2
+
+With TextPad, a RegEx like this
+Search: \([0-9]+\),\([0-9]+\)
+Replace with: \1\.\2
+
