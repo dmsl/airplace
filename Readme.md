@@ -13,7 +13,7 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
-Œ•ou should have received a copy of the GNU General Public License
+Υou should have received a copy of the GNU General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 Authors:
@@ -78,7 +78,7 @@ The RadioMap Server can be executed on any PC running Java.
 
 Preparing a map for Airplace, to be used with the Logger and Tracker applications, is very easy. All is needed is a map of the floorplan in jpeg format (e.g., mymap.jpg) and an associated configuration file (e.g., mymap.config) that keeps the actual Width and Height of the floorplan in meters (Note: The filename before the file extension must be the same for both files. An example is included in folder \Example\Map that can be modified appropriately with your own values).
 
-Both files should be stored together inside a folder on the smartphone‚Äôs sdcard.
+Both files should be stored together inside a folder on the smartphone’s sdcard.
 
 Zooming in/out of the map in the Logger and Tracker applications is easy by pressing and holding the finger on the map and then dragging it up/down to the desired zoom level. 
 
@@ -89,18 +89,18 @@ Hint: The actual values for the dimensions of the floorplan are not so important
 
 This section describes how to manually prepare the required data files in order to use the Airplace Tracker application without putting the RadioMap Server online. (Note: The RadioMap server handles conveniently the processing of the RSS log files collected with the Logger, as well as the distribution of the resulting radiomap and algorithm-specific parameters to the Tracker.)
 
-1.	Use the Aiplace Logger, as described in the video tutorial, to collect the RSS data which are stored locally on the smartphone sdcard in a log file with a user-defined filename (e.g., ‚Äòrss-log-mymap‚Äô). An example log file that contains the samples collected at 4 locations (5 samples\location) inside a single room can be found in folder \Example\Log.
-2.	Copy the ‚Äòrss-log-mymap‚Äô file to the ‚Äòindoor-rss-logs‚Äô folder of the RadioMap Server directory tree and rename it to ‚Äòrsslog1.txt‚Äô. In case of crowdsourcing, do the same for the log files collected by other users, carrying the same smartphone, and rename them to ‚Äòrsslog2.txt‚Äô, ‚Äòrsslog3.txt‚Äô, etc. (Note: All folders in the directory tree are created on the first execution of the Radiomap Server)
-3.	Press the ‚ÄúCreate Indoor Radiomap‚Äù button to get the radiomap files in the ‚Äòindoor‚Äô folder. The ‚Äòindoor-radiomap.txt‚Äô file contains all the recorded RSS samples, while the ‚Äòindoor-radiomap-mean.txt‚Äô contains only the mean RSS for each WiFi Access Point (AP) at each location. The latter, which is much smaller in size, is the radiomap file that is used for positioning with the Tracker. Example files can be found in folder \Example\Radiomap (Note: To accommodate the missing RSS values whenever an AP is not detected at a location, a default RSS value is used, which is lower than the sensitivity level, e.g. -110 dBm. This value can be user-defined from within the RadioMap Server through menu Edit ‚Üí Settings)
-4.	Create the testing data that are required for calculating the algorithm-specific parameters as described in the next section ‚ÄúHow to create Test Data‚Äù. 
-5.	The ‚Äòindoor‚Äô folder should now contain 3 files (i.e., ‚Äòindoor-radiomap.txt‚Äô, ‚Äòindoor-radiomap-mean.txt‚Äô and ‚Äòtest-data.txt‚Äô). Press the ‚ÄúCreate Indoor Parameters‚Äù to create the algorithm-specific parameters. Example file can be found in folder \Example\Parameters (Note: This step may take some time depending on the size of the radiomap and test data files.)
+1.	Use the Aiplace Logger, as described in the video tutorial, to collect the RSS data which are stored locally on the smartphone sdcard in a log file with a user-defined filename (e.g., ‘rss-log-mymap’). An example log file that contains the samples collected at 4 locations (5 samples\location) inside a single room can be found in folder \Example\Log.
+2.	Copy the ‘rss-log-mymap’ file to the ‘indoor-rss-logs’ folder of the RadioMap Server directory tree and rename it to ‘rsslog1.txt’. In case of crowdsourcing, do the same for the log files collected by other users, carrying the same smartphone, and rename them to ‘rsslog2.txt’, ‘rsslog3.txt’, etc. (Note: All folders in the directory tree are created on the first execution of the Radiomap Server)
+3.	Press the “Create Indoor Radiomap” button to get the radiomap files in the ‘indoor’ folder. The ‘indoor-radiomap.txt’ file contains all the recorded RSS samples, while the ‘indoor-radiomap-mean.txt’ contains only the mean RSS for each WiFi Access Point (AP) at each location. The latter, which is much smaller in size, is the radiomap file that is used for positioning with the Tracker. Example files can be found in folder \Example\Radiomap (Note: To accommodate the missing RSS values whenever an AP is not detected at a location, a default RSS value is used, which is lower than the sensitivity level, e.g. -110 dBm. This value can be user-defined from within the RadioMap Server through menu Edit → Settings)
+4.	Create the testing data that are required for calculating the algorithm-specific parameters as described in the next section “How to create Test Data”. 
+5.	The ‘indoor’ folder should now contain 3 files (i.e., ‘indoor-radiomap.txt’, ‘indoor-radiomap-mean.txt’ and ‘test-data.txt’). Press the “Create Indoor Parameters” to create the algorithm-specific parameters. Example file can be found in folder \Example\Parameters (Note: This step may take some time depending on the size of the radiomap and test data files.)
 6.	To run the Airplace Tracker application on the smartphone do the next steps:
-‚Ä¢	Copy the same floorplan map that was used in the Airplace Logger application (e.g., ‚Äòmymap.jpg‚Äô) and the associated configuration file with the actual dimensions in meters (e.g., ‚Äòmymap.config‚Äô) on the smartphone‚Äôs sdcard
-‚Ä¢	Copy the following files from the ‚Äòindoor‚Äô folder of the Radiomap Server to the smartphone‚Äôs sdcard and rename them according to these rules:
-i.	indoor-radiomap-mean.txt  ‚Üí radiomap_indoor-mymap (Note: No file extension)
-ii.	indoor-radiomap-parameters.txt ‚Üí radiomap_indoor-mymap-parameters (Note: No file extension)
-iii.	test-data.txt ‚Üí test-data.txt (Note: The filename is the same and this file is only required for the offline mode of the Airplace Tracker)
-‚Ä¢	Select the ‚Äòradiomap_indoor-mymap‚Äô file as the radiomap file from within the Airplace Tracker Preferences menu, select a positioning algorithm from the Algorithms menu and start real-time tracking. (Note: The MMSE algorithm usually provides better accuracy.)
+•	Copy the same floorplan map that was used in the Airplace Logger application (e.g., ‘mymap.jpg’) and the associated configuration file with the actual dimensions in meters (e.g., ‘mymap.config’) on the smartphone’s sdcard
+•	Copy the following files from the ‘indoor’ folder of the Radiomap Server to the smartphone’s sdcard and rename them according to these rules:
+i.	indoor-radiomap-mean.txt  → radiomap_indoor-mymap (Note: No file extension)
+ii.	indoor-radiomap-parameters.txt → radiomap_indoor-mymap-parameters (Note: No file extension)
+iii.	test-data.txt → test-data.txt (Note: The filename is the same and this file is only required for the offline mode of the Airplace Tracker)
+•	Select the ‘radiomap_indoor-mymap’ file as the radiomap file from within the Airplace Tracker Preferences menu, select a positioning algorithm from the Algorithms menu and start real-time tracking. (Note: The MMSE algorithm usually provides better accuracy.)
 
 ## How to create Test Data 
 
@@ -110,30 +110,30 @@ Test data may serve two purposes:
 
 ## Test data can be created in the following two ways:
 1.	Quick, but not scientifically sound. Follow the steps 1-3 in the previous section and then
-‚Ä¢	Copy the file ‚Äòindoor-radiomap.txt‚Äô to another location and rename it to ‚Äòtest-data.txt‚Äô
-‚Ä¢	Copy the file ‚Äòtest-data.txt‚Äô in folder ‚Äòindoor‚Äô
+•	Copy the file ‘indoor-radiomap.txt’ to another location and rename it to ‘test-data.txt’
+•	Copy the file ‘test-data.txt’ in folder ‘indoor’
 (Note: This option is not recommended because the algorithm-specific parameters calculated in this way will actually fit the radiomap data and are not guaranteed to work well when the Tracker application is invoked after a long time. Moreover, using such test data in the Offline mode of the Tracker application will result to very low positioning error which does not reflect the accuracy that will be attained when the Tracker is used after a long time.)
 
 2.	More time and additional RSS data required. Follow the steps 1-3 in the previous section and then
-‚Ä¢	Move the files ‚Äòindoor-radiomap.txt‚Äô and ‚Äòindoor-radiomap-mean.txt‚Äô from the ‚Äòindoor‚Äô folder to another location temporarily e.g. folder ‚Äòtemp‚Äô
-‚Ä¢	Remove the ‚Äòrsslog1.txt‚Äô file (that corresponds to the radiomap data) from ‚Äòindoor-rss-logs‚Äô folder
-‚Ä¢	Use the Airplace Logger to collect additional test data (preferably some time after the data collection for the radiomap and using different test locations) and store them in a log file e.g. ‚Äòrss-log-mymap-test‚Äô. Copy this file to the ‚Äòindoor-rss-logs‚Äô folder and rename it to ‚Äòrsslog1.txt‚Äô (Note: This should now be the only log file in the folder)
-‚Ä¢	Press the ‚ÄúCreate Indoor Radiomap‚Äù button to get the test files in the ‚Äòindoor‚Äô folder
-‚Ä¢	The ‚Äòindoor‚Äô folder contains 2 new files ‚Äòindoor-radiomap.txt‚Äô and ‚Äòindoor-radiomap-mean.txt‚Äô that correspond to the test data. Remove the ‚Äòindoor-radiomap-mean.txt‚Äô file and rename the ‚Äòindoor-radiomap.txt‚Äô to ‚Äòtest-data.txt‚Äô.
-‚Ä¢	Copy the original files ‚Äòindoor-radiomap.txt‚Äô and ‚Äòindoor-radiomap-mean.txt‚Äô from folder ‚Äòtemp‚Äô back to folder ‚Äòindoor‚Äô
+•	Move the files ‘indoor-radiomap.txt’ and ‘indoor-radiomap-mean.txt’ from the ‘indoor’ folder to another location temporarily e.g. folder ‘temp’
+•	Remove the ‘rsslog1.txt’ file (that corresponds to the radiomap data) from ‘indoor-rss-logs’ folder
+•	Use the Airplace Logger to collect additional test data (preferably some time after the data collection for the radiomap and using different test locations) and store them in a log file e.g. ‘rss-log-mymap-test’. Copy this file to the ‘indoor-rss-logs’ folder and rename it to ‘rsslog1.txt’ (Note: This should now be the only log file in the folder)
+•	Press the “Create Indoor Radiomap” button to get the test files in the ‘indoor’ folder
+•	The ‘indoor’ folder contains 2 new files ‘indoor-radiomap.txt’ and ‘indoor-radiomap-mean.txt’ that correspond to the test data. Remove the ‘indoor-radiomap-mean.txt’ file and rename the ‘indoor-radiomap.txt’ to ‘test-data.txt’.
+•	Copy the original files ‘indoor-radiomap.txt’ and ‘indoor-radiomap-mean.txt’ from folder ‘temp’ back to folder ‘indoor’
 
 
 
 ## How to calculate statistics for the positioning error using the Airplace Tracker (Offline mode) 
 
-1.	Run the Airplace Tracker application making sure that you have the following files on the smartphone‚Äôs sdcard:
-‚Ä¢	radiomap_indoor-mymap
-‚Ä¢	radiomap_indoor-mymap-parameters
-‚Ä¢	test-data.txt
-2.	From within the Airplace Tracker preferences change the mode using the ‚ÄòOnline/Offline Mode‚Äô checkbox in the ‚ÄòMode‚Äô section. Then, select the ‚Äòtest-data.txt‚Äô file on your sdcard as the Test Data file.
-3.	Go back to the main screen and press the ‚ÄòStatistics Indoor‚Äô button on the lower right corner
-4.	Depending on the size of the ‚Äòtest-data.txt‚Äô file it may take several minutes to calculate the statistics and on the screen you can see the remaining time. At the end, the Average Positioning Error and the Average Execution Time are printed on the screen for the currently selected algorithm
-5.	You can select another algorithm from the ‚ÄòAlgorithms‚Äô menu and repeat the process
-6.	You may switch back to real-time positioning by using the ‚ÄòOnline/Offline Mode‚Äô checkbox in the Airplace Tracker preferences
+1.	Run the Airplace Tracker application making sure that you have the following files on the smartphone’s sdcard:
+•	radiomap_indoor-mymap
+•	radiomap_indoor-mymap-parameters
+•	test-data.txt
+2.	From within the Airplace Tracker preferences change the mode using the ‘Online/Offline Mode’ checkbox in the ‘Mode’ section. Then, select the ‘test-data.txt’ file on your sdcard as the Test Data file.
+3.	Go back to the main screen and press the ‘Statistics Indoor’ button on the lower right corner
+4.	Depending on the size of the ‘test-data.txt’ file it may take several minutes to calculate the statistics and on the screen you can see the remaining time. At the end, the Average Positioning Error and the Average Execution Time are printed on the screen for the currently selected algorithm
+5.	You can select another algorithm from the ‘Algorithms’ menu and repeat the process
+6.	You may switch back to real-time positioning by using the ‘Online/Offline Mode’ checkbox in the Airplace Tracker preferences
 
 
